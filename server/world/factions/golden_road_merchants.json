@@ -1,0 +1,18 @@
+{
+  "id": "golden_road_merchants",
+  "name": "Golden Road Merchants",
+  "type": "guild",
+
+  "controlled_regions": ["eldervale_plains", "sundervale_expanse"],
+
+  "starting_members": {
+    "npcs": 300
+  },
+
+  "starting_power": {
+    "influence": 40,
+    "wealth": 80
+  },
+
+  "description": "A powerful merchant guild controlling trade routes across plains and deserts."
+}
