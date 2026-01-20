@@ -1,0 +1,19 @@
+{
+  "id": "golden_dune_caravans",
+  "name": "Golden Dune Caravans",
+  "type": "company",
+
+  "controlled_regions": ["sundervale_expanse"],
+
+  "starting_members": {
+    "npcs": 150
+  },
+
+  "starting_power": {
+    "wealth": 70
+  },
+
+  "business_type": "trade_caravans",
+
+  "description": "A caravan company licensed to move water, spice, and goods through the Sundervale desert."
+}
