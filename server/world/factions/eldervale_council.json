@@ -1,0 +1,22 @@
+{
+  "id": "eldervale_council",
+  "name": "Eldervale Council",
+  "type": "kingdom",
+
+  "controlled_regions": ["eldervale_plains"],
+
+  "starting_members": {
+    "npcs": 1200
+  },
+
+  "starting_power": {
+    "influence": 70,
+    "military": 50,
+    "wealth": 60
+  },
+
+  "laws_enforced": true,
+  "taxation": "moderate",
+
+  "description": "A governing council formed from ancient Summerhand accords, struggling to maintain unity through law and tradition."
+}
