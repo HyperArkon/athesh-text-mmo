@@ -1,1 +1,10 @@
-
+{
+  "name": "athesh-text-mmo",
+  "version": "0.1.0",
+  "description": "Text-based AI MMORPG set in Athesh",
+  "main": "server/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server/index.js"
+  }
+}
