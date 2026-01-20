@@ -1,0 +1,23 @@
+{
+  "id": "stoneguard_legions",
+  "name": "Stoneguard Legions",
+  "type": "mercenary",
+
+  "controlled_regions": ["ironreach_mountains"],
+
+  "starting_members": {
+    "npcs": 200
+  },
+
+  "starting_power": {
+    "military": 80,
+    "wealth": 30
+  },
+
+  "contract_rules": {
+    "will_defend_regions": true,
+    "accept_player_contracts": true
+  },
+
+  "description": "A professional mercenary force trained for mountain warfare and siege defense."
+}
