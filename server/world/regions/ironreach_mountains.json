@@ -1,0 +1,88 @@
+{
+  "id": "ironreach_mountains",
+  "name": "Ironreach Mountains",
+  "type": "mountain",
+
+  "description": {
+    "short": "A land of stone fortresses, ancient mines, and ever-ready defenses.",
+    "long": "The Ironreach Mountains rise like jagged blades across Athesh, home to carved cities, dwarven holds, and cliffbound fortresses. Here, every structure is built for endurance, and every citizen is trained to defend the mountain."
+  },
+
+  "geography": {
+    "climate": "alpine",
+    "terrain": ["mountain_peaks", "cliff_cities", "deep_mines", "stone_passes"],
+    "buildable": {
+      "land": true,
+      "water": false,
+      "exceptions": ["bridges", "aqueducts", "fortified_gates"]
+    },
+    "hazards": ["rockslides", "thin_air", "cave_ins"]
+  },
+
+  "cultures": {
+    "dominant": "Ironreach Holds",
+    "minor": ["Human Border Forts", "Beastfolk Mountaineers"],
+    "attitudes": {
+      "beastfolk": -5,
+      "demihuman": -10,
+      "undead": -30,
+      "construct": 5
+    }
+  },
+
+  "laws": {
+    "necromancy": "restricted",
+    "undead_presence": "illegal",
+    "open_weapons": "mandatory",
+    "building_permits": false,
+    "siege_authority": "holds_only",
+    "mining_rights_enforced": true
+  },
+
+  "prejudice": {
+    "base": 20,
+    "modifiers": {
+      "siege_threat": 35,
+      "resource_dispute": 25
+    }
+  },
+
+  "economy": {
+    "primary": ["mining", "forging", "stonework"],
+    "currency_pressure": "moderate",
+    "black_market_activity": "low"
+  },
+
+  "factions": {
+    "major": [
+      "ironreach_high_holds",
+      "deepforge_conclave"
+    ],
+    "minor": [
+      "stoneguard_legions",
+      "tunnelborn_sect"
+    ]
+  },
+
+  "myths": {
+    "founding": "The mountains were carved open to imprison what once crawled beneath Athesh.",
+    "local_legends": [
+      "The Sealed Deep Gate",
+      "The First Hammer"
+    ]
+  },
+
+  "npc_awareness": {
+    "fame_thresholds": {
+      "known": 10,
+      "renowned": 35,
+      "mythic": 70
+    }
+  },
+
+  "starting_locations": [
+    "stonecrown_hold",
+    "deepforge_city",
+    "highpass_outpost"
+  ]
+}
