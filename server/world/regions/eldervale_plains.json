@@ -8,6 +8,15 @@
     "long": "Eldervale Plains stretch endlessly beneath open skies, dotted with farming villages, trade roads from the Summerhand era, and cities built atop ancient compromises. Peace here is maintained by memory rather than trust."
   },
   
+  economy: {
+  wealth: 50, // 0–100
+  stability: 50, // affects prices & unrest
+  corruption: 20,
+  supply: {},
+  demand: {},
+  prices: {}
+}
+
 "crime": {
   "crimeLevel": 20,
   "gangs": [],
