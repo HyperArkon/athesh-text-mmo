@@ -21,6 +21,13 @@
   "lockdown": false,
   "corruption": 5
 }
+  
+"prison": {
+  "capacity": 50,
+  "inmates": [],
+  "securityLevel": 50,
+  "corruption": 10
+}
 
   "geography": {
     "climate": "polar",
