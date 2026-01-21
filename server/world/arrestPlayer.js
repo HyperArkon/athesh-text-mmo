@@ -1,3 +1,7 @@
+if (player.legal.bribes.guards > 20) {
+  region.lawEnforcement.alertLevel -= 10;
+  return;
+}
 export function arrestPlayer(player, region) {
   if (player.prison.incarcerated) return;
 
