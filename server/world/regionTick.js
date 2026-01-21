@@ -40,4 +40,7 @@ function clampRegionState(state) {
   state.economy.prosperity = clamp(state.economy.prosperity);
   state.economy.scarcity = clamp(state.economy.scarcity);
   state.prejudice.current = clamp(state.prejudice.current);
+  import { economyTick } from "./economy/economyTick.js";
+economyTick(region);
+
 }
