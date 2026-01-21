@@ -14,6 +14,12 @@ export function handleTradeCommand(player, world, input) {
     case "send":
       return createPlayerCaravan(player, world, args[0]);
 
+    case "contracts":
+      return world.contracts.filter(c => c.status === "open");
+   
+    case "escort":
+      return acceptEscortContract(player, world.contracts.find(c => c.id === args[0]), world);
+
     default:
       return { success: false, message: "Unknown trade command." };
   }
