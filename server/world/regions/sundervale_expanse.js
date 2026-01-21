@@ -82,6 +82,14 @@
     "currency_pressure": "high",
     "black_market_activity": "moderate"
   },
+economy: {
+  wealth: 50, // 0–100
+  stability: 50, // affects prices & unrest
+  corruption: 20,
+  supply: {},
+  demand: {},
+  prices: {}
+}
 
   "factions": {
     "major": [
