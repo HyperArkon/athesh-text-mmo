@@ -11,3 +11,9 @@ prison: {
   sentence: 0,
   escapeAttempts: 0
 }
+
+legal: {
+  awaitingTrial: false,
+  trialRegion: null,
+  verdict: null
+}
