@@ -1,3 +1,5 @@
+import { arrestPlayer } from "./arrestPlayer.js";
+
 export function handleLawResponse(player, region) {
   const law = region.lawEnforcement;
 
@@ -13,6 +15,6 @@ export function handleLawResponse(player, region) {
     return;
   }
 
-  player.status = "hunted";
+  arrestPlayer(player, region);
   law.alertLevel += 10;
 }
