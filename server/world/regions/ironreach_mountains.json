@@ -7,6 +7,13 @@
     "short": "A land of stone fortresses, ancient mines, and ever-ready defenses.",
     "long": "The Ironreach Mountains rise like jagged blades across Athesh, home to carved cities, dwarven holds, and cliffbound fortresses. Here, every structure is built for endurance, and every citizen is trained to defend the mountain."
   },
+  
+"crime": {
+  "crimeLevel": 20,
+  "gangs": [],
+  "lawPressure": 50,
+  "corruption": 10
+}
 
   "geography": {
     "climate": "alpine",
