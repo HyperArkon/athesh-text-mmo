@@ -7,6 +7,13 @@
     "short": "A sun-scorched desert ruled by water law, trade caravans, and buried gods.",
     "long": "The Sundervale Expanse is a vast desert of golden dunes, salt flats, and ancient ruins buried beneath shifting sands. Life revolves around water rights, caravan routes, and sun-blessed cities where trade and faith are inseparable."
   },
+  
+"crime": {
+  "crimeLevel": 20,
+  "gangs": [],
+  "lawPressure": 50,
+  "corruption": 10
+}
 
   "geography": {
     "climate": "arid",
