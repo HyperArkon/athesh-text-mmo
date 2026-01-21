@@ -14,6 +14,13 @@
   "lawPressure": 50,
   "corruption": 10
 }
+  
+"lawEnforcement": {
+  "guardCount": 20,
+  "alertLevel": 10,
+  "lockdown": false,
+  "corruption": 5
+}
 
   "geography": {
     "climate": "temperate",
