@@ -26,3 +26,9 @@ export function arrestPlayer(player, region) {
   player.crime.heat = 0;
   player.status = "imprisoned";
 }
+
+region.court.activeTrials.push(player.id);
+
+player.legal.awaitingTrial = true;
+player.legal.trialRegion = region.id;
+player.legal.verdict = null;
