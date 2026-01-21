@@ -8,6 +8,7 @@ import { checkGangRecruitment } from "./playerGangRecruitment.js";
 import { runLawEnforcementTick } from "./lawEnforcementTick.js";
 import { checkPlayerDetection } from "./lawPlayerDetection.js";
 import { handleLawResponse } from "./lawResponse.js";
+import { runLawGangConflict } from "./lawGangConflict.js";
 
 export function runWorldTick() {
   // Update regions
@@ -17,7 +18,8 @@ export function runWorldTick() {
   for (const regionId in WorldState.regions) {
   const region = WorldState.getRegion(regionId);
   runCrimeTick(region, WorldState);
-}
+runLawGangConflict(region);
+  }
 for (const playerId in WorldState.players) {
   const player = WorldState.players[playerId];
   runPlayerCrimeTick(player, WorldState);
