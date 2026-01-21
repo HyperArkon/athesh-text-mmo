@@ -14,7 +14,7 @@
   corruption: 20,
   supply: {},
   demand: {},
-  prices: {},
+  prices: {}
 }
     
 "crime": {
