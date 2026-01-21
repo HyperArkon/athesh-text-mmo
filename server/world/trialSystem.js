@@ -1,13 +1,28 @@
 export function runTrial(player, region) {
   const court = region.court;
 
-  let guiltScore =
-    player.crime.notoriety +
-    player.crime.wantedLevel * 10 -
-    court.fairness +
-    court.severity;
+ import { applyLawyerEffect } from "./lawyers.js";
+import { applyFalseEvidence } from "./falseEvidence.js";
+import { getJudgeBias } from "./judgeBias.js";
 
-  guiltScore -= court.corruption * 0.5;
+let guiltScore =
+  player.crime.notoriety +
+  player.crime.wantedLevel * 10 -
+  court.fairness +
+  court.severity;
+
+// Judge bias
+guiltScore += getJudgeBias(region);
+
+// Bribes reduce guilt
+guiltScore -= player.legal.bribes.court * 0.4;
+
+// Lawyer effect
+guiltScore = applyLawyerEffect(player, guiltScore);
+
+// False evidence effect
+guiltScore = applyFalseEvidence(player, guiltScore);
+
 
   let verdict = "innocent";
 
