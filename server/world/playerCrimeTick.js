@@ -1,3 +1,5 @@
+import { issueBounty } from "./bounties.js";
+
 export function runPlayerCrimeTick(player, worldState) {
   const region = worldState.getRegion(player.location.regionId);
   if (!region) return;
@@ -17,5 +19,9 @@ export function runPlayerCrimeTick(player, worldState) {
     region.crime.lawPressure > 60
   ) {
     player.status = "fugitive";
-  }
+    
+ if (player.crime.wantedLevel > 5) {
+  issueBounty(player, region);
+}
+ }
 }
