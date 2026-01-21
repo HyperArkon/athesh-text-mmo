@@ -7,6 +7,13 @@
     "short": "Fertile plains ruled by old accords and quiet tensions.",
     "long": "Eldervale Plains stretch endlessly beneath open skies, dotted with farming villages, trade roads from the Summerhand era, and cities built atop ancient compromises. Peace here is maintained by memory rather than trust."
   },
+  
+"crime": {
+  "crimeLevel": 20,
+  "gangs": [],
+  "lawPressure": 50,
+  "corruption": 10
+}
 
   "geography": {
     "climate": "temperate",
