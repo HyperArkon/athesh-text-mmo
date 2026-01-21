@@ -13,6 +13,19 @@ prison: {
 }
 
 legal: {
+  lawyer: {
+  hired: false,
+  skill: 0 // 0–100
+},
+bribes: {
+  court: 0,
+  guards: 0
+},
+falseEvidence: {
+  planted: false,
+  severity: 0
+}
+
   awaitingTrial: false,
   trialRegion: null,
   verdict: null
