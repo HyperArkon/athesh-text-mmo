@@ -28,6 +28,14 @@
   "securityLevel": 50,
   "corruption": 10
 }
+  
+"court": {
+  "fairness": 50,
+  "severity": 50,
+  "corruption": 10,
+  "executionEnabled": true,
+  "activeTrials": []
+}
 
   "geography": {
     "climate": "polar",
