@@ -16,9 +16,13 @@ if (caravan.risk > 25 && !caravan.escortRequired) {
 }
   
   // Bandit attack chance
-  if (Math.random() * 100 < caravan.risk) {
-    caravan.guards -= Math.floor(Math.random() * 3);
-    caravan.risk += 5;
+ const escortPower = caravan.escorts.length * 5;
+const defense = caravan.guards + escortPower;
+
+if (Math.random() * 100 < caravan.risk - defense) {
+  caravan.guards -= Math.floor(Math.random() * 3);
+  caravan.risk += 5;
+}
 
     if (caravan.guards <= 0) {
       caravan.status = "destroyed";
