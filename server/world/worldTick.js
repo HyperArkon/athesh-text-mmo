@@ -10,6 +10,7 @@ import { checkPlayerDetection } from "./lawPlayerDetection.js";
 import { handleLawResponse } from "./lawResponse.js";
 import { runLawGangConflict } from "./lawGangConflict.js";
 import { runPrisonTick } from "./prisonTick.js";
+import { runCourtTick } from "./courtTick.js";
 
 export function runWorldTick() {
   // Update regions
@@ -37,6 +38,7 @@ if (region && checkPlayerDetection(player, region)) {
 
 runGangFactionInteractions(WorldState);
 runPrisonTick(region, WorldState);
+runCourtTick(region, WorldState);
 
     runRegionTick(regionData, regionState);
   }
