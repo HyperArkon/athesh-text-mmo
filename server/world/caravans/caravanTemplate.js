@@ -1,13 +1,22 @@
-export function createCaravan(origin, destination, goods, owner = null) {
+export function createCaravan({
+  origin,
+  destination,
+  goods,
+  ownerType = "npc", // npc | player | company | faction
+  ownerId = null
+}) {
   return {
     id: crypto.randomUUID(),
     origin,
     destination,
     goods,
-    owner, // faction, company, or player
-    guards: Math.floor(Math.random() * 10),
+    ownerType,
+    ownerId,
+
+    guards: 5,
     risk: 10,
     progress: 0,
-    status: "traveling"
+    status: "traveling",
+    profit: 0
   };
 }
