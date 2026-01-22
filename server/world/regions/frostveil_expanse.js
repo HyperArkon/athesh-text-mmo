@@ -110,6 +110,11 @@
       "mythic": 75
     }
   },
+  
+waterways: {
+  rivers: [],
+  seaAccess: false
+}
 
   "starting_locations": [
     "icewatch_hold",
