@@ -2,8 +2,9 @@ export function createCaravan({
   origin,
   destination,
   goods,
-  ownerType = "npc", // npc | player | company | faction
-  ownerId = null
+  ownerType = "npc",
+  ownerId = null,
+  transport = "land" // land | river | sea
 }) {
   return {
     id: crypto.randomUUID(),
@@ -12,15 +13,19 @@ export function createCaravan({
     goods,
     ownerType,
     ownerId,
+    transport,
 
-    guards: 5,
+    guards: transport === "land" ? 5 : 8,
     escorts: [],
     escortRequired: false,
     escortReward: 0,
-    escortStatus: "open" // open | assigned | completed | failed
-    risk: 10,
+    escortStatus: "open",
+
+    risk: transport === "land" ? 10 : 6,
     progress: 0,
     status: "traveling",
     profit: 0
   };
+}
+
 }
