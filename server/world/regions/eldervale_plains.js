@@ -109,6 +109,11 @@
       "mythic": 85
     }
   },
+  
+waterways: {
+  rivers: [],
+  seaAccess: false
+}
 
   "starting_locations": [
     "greenford_village",
