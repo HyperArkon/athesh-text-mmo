@@ -118,6 +118,11 @@ economy: {
       "mythic": 80
     }
   },
+  
+waterways: {
+  rivers: [],
+  seaAccess: false
+}
 
   "starting_locations": [
     "sunspire_city",
