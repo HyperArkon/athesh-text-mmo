@@ -117,6 +117,11 @@ economy: {
       "mythic": 70
     }
   },
+  
+waterways: {
+  rivers: [],
+  seaAccess: false
+}
 
   "starting_locations": [
     "stonecrown_hold",
