@@ -109,7 +109,12 @@
       "mythic": 85
     }
   },
-  
+  infrastructure: {
+  ports: 0,
+  bridges: 0,
+  shipyards: 0
+}
+
 waterways: {
   rivers: [],
   seaAccess: false
