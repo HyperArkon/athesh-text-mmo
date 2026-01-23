@@ -19,6 +19,25 @@ export function handleTradeCommand(player, world, input) {
    
     case "escort":
       return acceptEscortContract(player, world.contracts.find(c => c.id === args[0]), world);
+      
+case "send-sea":
+  return createNavalCaravan({
+    origin: player.region,
+    destination: args[0],
+    goods: { ...player.inventory },
+    vesselType: "merchantShip",
+    ownerType: "player",
+    ownerId: player.id
+  });
+
+case "send-river":
+  return createRiverCaravan({
+    origin: player.region,
+    destination: args[0],
+    goods: { ...player.inventory },
+    ownerType: "player",
+    ownerId: player.id
+  });
 
     default:
       return { success: false, message: "Unknown trade command." };
