@@ -120,6 +120,10 @@ waterways: {
   rivers: [],
   seaAccess: false
 }
+piracy: {
+  risk: 0,
+  activePirates: []
+}
 
   "starting_locations": [
     "icewatch_hold",
