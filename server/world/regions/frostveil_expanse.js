@@ -7,7 +7,12 @@
     "short": "A frozen land where survival is law and weakness is remembered.",
     "long": "The Frostveil Expanse is a brutal northern region of endless snowfields, ice-choked rivers, and mountain-walled cities. Life here is hard, honor-bound, and unforgiving. Every law exists to keep people alive."
   },
-  
+  infrastructure: {
+  ports: 0,
+  bridges: 0,
+  shipyards: 0
+}
+
   economy: {
   wealth: 50, // 0–100
   stability: 50, // affects prices & unrest
