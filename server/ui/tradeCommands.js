@@ -44,6 +44,11 @@ case "raid":
 case "naval-status":
   return world.regions[player.region].piracy;
 
+case "fleet-attack":
+  return playerFleetAttack(
+    player.fleet,
+    world.factions.find(f => f.id === args[0]).fleets[0]
+  );
     default:
       return { success: false, message: "Unknown trade command." };
   }
