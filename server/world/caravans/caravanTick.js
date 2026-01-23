@@ -32,5 +32,15 @@ if (Math.random() * 100 < caravan.risk - defense) {
 
   if (caravan.progress >= 100) {
     caravan.status = "arrived";
+    let speed = 10;
+
+if (caravan.transport === "river") speed = 7;
+if (caravan.transport === "sea") speed = 12;
+
+caravan.progress += speed - caravan.risk;
+    if (caravan.transport !== "land" && Math.random() * 100 < caravan.risk) {
+  caravan.risk += 5; // piracy increases danger
+}
+
   }
 }
