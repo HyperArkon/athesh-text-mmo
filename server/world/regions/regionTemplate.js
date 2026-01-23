@@ -116,6 +116,13 @@ export const regionTemplate = {
     fortLevel: 0,
     underSiege: false
   },
+  naval: {
+  isCoastal: false,
+  hasPort: false,
+  portLevel: 0, // 0–5
+  blockaded: false,
+  controllingFleet: null
+},
 
   // ─────────────────────────────
   // World Events & History
