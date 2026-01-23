@@ -14,7 +14,15 @@ if (caravan.risk > 25 && !caravan.escortRequired) {
     )
   );
 }
-  
+  if (caravan.transport !== "land") {
+  const region = world.regions[caravan.origin];
+  const piracyRisk = region.piracy.risk;
+
+  if (Math.random() * 100 < piracyRisk) {
+    caravan.risk += 10;
+  }
+}
+
   // Bandit attack chance
  const escortPower = caravan.escorts.length * 5;
 const defense = caravan.guards + escortPower;
