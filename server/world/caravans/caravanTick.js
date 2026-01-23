@@ -17,6 +17,10 @@ if (caravan.risk > 25 && !caravan.escortRequired) {
   if (caravan.transport !== "land") {
   const region = world.regions[caravan.origin];
   const piracyRisk = region.piracy.risk;
+if (caravan.transport !== "land" && Math.random() * 100 < caravan.risk) {
+  caravan.status = "raided";
+  return;
+}
 
   if (Math.random() * 100 < piracyRisk) {
     caravan.risk += 10;
