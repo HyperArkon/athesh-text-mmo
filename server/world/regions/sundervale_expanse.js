@@ -129,6 +129,10 @@ waterways: {
   rivers: [],
   seaAccess: false
 }
+piracy: {
+  risk: 0,
+  activePirates: []
+}
 
   "starting_locations": [
     "sunspire_city",
