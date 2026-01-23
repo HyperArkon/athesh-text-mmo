@@ -5,6 +5,16 @@ export function caravanTick(caravan, world) {
 if (caravan.risk > 25 && !caravan.escortRequired) {
   caravan.escortRequired = true;
   caravan.escortReward = caravan.risk * 10;
+const fleets = world.factions
+  .flatMap(f => f.fleets || [])
+  .filter(f => f.region === caravan.origin && f.status === "active");
+
+if (caravan.transport !== "land" && fleets.length > 0) {
+  if (Math.random() * 100 < 30) {
+    caravan.status = "intercepted";
+    return;
+  }
+}
 
   world.contracts.push(
     createEscortContract(
