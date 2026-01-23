@@ -1,5 +1,6 @@
 export function runFactionTick(factionData, factionState, worldState) {
   const regions = factionState.territory.regions || [];
+navalPatrolTick(faction, world.regions[faction.homeRegion]);
 
   // 1. Influence changes based on type
   switch (factionState.type) {
