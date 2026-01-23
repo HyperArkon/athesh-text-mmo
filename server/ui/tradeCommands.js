@@ -38,6 +38,11 @@ case "send-river":
     ownerType: "player",
     ownerId: player.id
   });
+case "raid":
+  return raidCaravan(player, world.caravans.find(c => c.id === args[0]), world.regions[player.region]);
+
+case "naval-status":
+  return world.regions[player.region].piracy;
 
     default:
       return { success: false, message: "Unknown trade command." };
