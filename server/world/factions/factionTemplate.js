@@ -1,33 +1,132 @@
-export function createFactionState(factionData) {
-  return {
-    id: factionData.id,
-    type: factionData.type,
+export const factionTemplate = {
+  // ─────────────────────────────
+  // Core Identity
+  // ─────────────────────────────
+  id: "",
+  name: "",
+  type: "", 
+  // kingdom | guild | company | mercenary | pirate | privateer | cult | gang
 
-    power: {
-      influence: factionData.starting_power?.influence || 10,
-      military: factionData.starting_power?.military || 0,
-      wealth: factionData.starting_power?.wealth || 0
-    },
+  description: "",
+  banner: null,
 
-    reputation: {
-      public: 0,
-      feared: 0,
-      respected: 0
-    },
+  // ─────────────────────────────
+  // Leadership & Members
+  // ─────────────────────────────
+  leaderId: null,
+  officers: [],
+  members: [], // NPC & player IDs
+  hierarchy: {
+    ruler: null,
+    council: [],
+    commanders: [],
+    agents: []
+  },
 
-    members: {
-      npcs: factionData.starting_members?.npcs || 0,
-      players: 0
-    },
+  // ─────────────────────────────
+  // Territory & Influence
+  // ─────────────────────────────
+  homeRegion: null,
+  controlledRegions: [],
+  influence: 0, // 0–100
+  prestige: 0,  // fame / renown equivalent
 
-    territory: {
-      regions: factionData.controlled_regions || []
-    },
+  // ─────────────────────────────
+  // Diplomacy & Politics
+  // ─────────────────────────────
+  diplomacy: {
+    allies: [],
+    rivals: [],
+    enemies: [],
+    truces: []
+  },
 
-    status: {
-      outlawed: false,
-      at_war: [],
-      alliances: []
-    }
-  };
-}
+  wars: [], // active wars
+
+  // ─────────────────────────────
+  // Economy & Assets
+  // ─────────────────────────────
+  wealth: 0,
+  income: 0,
+  assets: {
+    buildings: [],
+    caravans: [],
+    fleets: [],
+    ports: [],
+    warehouses: []
+  },
+
+  tradePolicy: {
+    tariffs: 0,
+    embargoes: [],
+    smugglingTolerance: 0 // 0–100
+  },
+
+  // ─────────────────────────────
+  // Crime & Legality
+  // ─────────────────────────────
+  legalStatus: "legal", 
+  // legal | outlaw | privateer | criminal | rebel
+
+  crimeProfile: {
+    crimesCommitted: [],
+    bounties: [],
+    corruptionLevel: 0
+  },
+
+  // ─────────────────────────────
+  // Military & Mercenaries
+  // ─────────────────────────────
+  military: {
+    armySize: 0,
+    quality: 0,
+    stationedForces: {},
+    doctrines: []
+  },
+
+  mercenary: {
+    availableForHire: false,
+    contractLimit: 0,
+    activeContracts: []
+  },
+
+  // ─────────────────────────────
+  // Naval Power
+  // ─────────────────────────────
+  naval: {
+    isNaval: false,
+    fleetSize: 0,
+    seaControl: 0 // 0–100
+  },
+
+  fleets: [], // fleet objects
+
+  // ─────────────────────────────
+  // Reputation & Ideology
+  // ─────────────────────────────
+  reputation: {
+    lawful: 0,
+    criminal: 0,
+    popular: 0,
+    feared: 0
+  },
+
+  ideology: {
+    alignment: "", // lawful, neutral, chaotic
+    beliefs: [],
+    propagandaThemes: []
+  },
+
+  // ─────────────────────────────
+  // Events & History
+  // ─────────────────────────────
+  events: [],
+  historicalNotes: [],
+
+  // ─────────────────────────────
+  // Meta
+  // ─────────────────────────────
+  foundedAt: 0,
+  dissolvedAt: null,
+  active: true
+};
