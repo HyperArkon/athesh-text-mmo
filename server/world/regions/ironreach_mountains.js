@@ -81,7 +81,12 @@
     "currency_pressure": "moderate",
     "black_market_activity": "low"
   },
-  
+  infrastructure: {
+  ports: 0,
+  bridges: 0,
+  shipyards: 0
+}
+
 economy: {
   wealth: 50, // 0–100
   stability: 50, // affects prices & unrest
